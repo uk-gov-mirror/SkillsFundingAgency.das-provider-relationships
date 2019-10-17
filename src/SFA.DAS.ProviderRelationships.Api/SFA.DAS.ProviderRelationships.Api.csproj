@@ -94,6 +94,7 @@
     <Compile Include="Authentication\AuthenticationStartup.cs" />
     <Compile Include="Authentication\IAuthenticationStartup.cs" />
     <Compile Include="Controllers\UnsubscribeController.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\InvitationsController.cs" />
     <Compile Include="Controllers\PermissionsController.cs" />
     <Compile Include="DependencyResolution\AzureActiveDirectoryAuthenticationRegistry.cs" />
@@ -111,6 +112,7 @@
     </Compile>
     <Compile Include="Logging\LoggingContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RouteValues\Email\SendReportTrainingProviderEmailRouteValues.cs" />
     <Compile Include="RouteValues\Permissions\RevokePermissionsRouteValues.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -146,6 +148,7 @@
       <Name>SFA.DAS.ProviderRelationships</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
