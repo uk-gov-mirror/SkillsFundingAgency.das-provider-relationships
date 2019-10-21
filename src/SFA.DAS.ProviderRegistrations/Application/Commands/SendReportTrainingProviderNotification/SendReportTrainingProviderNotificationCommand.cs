@@ -1,7 +1,7 @@
 ﻿using System;
 using MediatR;
 
-namespace SFA.DAS.ProviderRelationships.Application.Commands.SendReportTrainingProviderNotification
+namespace SFA.DAS.ProviderRegistrations.Application.Commands.SendReportTrainingProviderNotification
 {
     public class SendReportTrainingProviderNotificationCommand : IRequest
     {

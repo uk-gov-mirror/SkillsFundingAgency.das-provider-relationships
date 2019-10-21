@@ -2,8 +2,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using MediatR;
+using SFA.DAS.ProviderRegistrations.Application.Commands.SendReportTrainingProviderNotification;
 using SFA.DAS.ProviderRelationships.Api.RouteValues.Email;
-using SFA.DAS.ProviderRelationships.Application.Commands.SendReportTrainingProviderNotification;
 
 namespace SFA.DAS.ProviderRelationships.Api.Controllers
 {

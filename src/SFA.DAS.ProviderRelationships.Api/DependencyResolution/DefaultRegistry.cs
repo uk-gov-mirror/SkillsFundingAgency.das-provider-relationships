@@ -29,5 +29,28 @@ namespace SFA.DAS.ProviderRelationships.Api.DependencyResolution
 
             return loggingContext;
         }
+
+        //todo not going to do this anymore, going to use the nservicebus publish instead
+        //private void ConfigureNotificationsApi(ProviderRelationshipsConfiguration config)
+        //{
+        //    HttpClient httpClient;
+
+        //    if (string.IsNullOrWhiteSpace(config.NotificationApiConfiguration.ClientId))
+        //    {
+        //        httpClient = new HttpClientBuilder()
+        //            .WithBearerAuthorisationHeader(new JwtBearerTokenGenerator(config.NotificationApiConfiguration))
+        //            .Build();
+        //    }
+        //    else
+        //    {
+        //        httpClient = new HttpClientBuilder()
+        //            .WithBearerAuthorisationHeader(new AzureActiveDirectoryBearerTokenGenerator(config.NotificationApiConfiguration))
+        //            .Build();
+        //    }
+
+        //    For<INotificationsApi>().Use<NotificationsApi>().Ctor<HttpClient>().Is(httpClient);
+
+        //    For<INotificationsApiClientConfiguration>().Use(config.NotificationApiConfiguration);
+        //}
     }
 }
