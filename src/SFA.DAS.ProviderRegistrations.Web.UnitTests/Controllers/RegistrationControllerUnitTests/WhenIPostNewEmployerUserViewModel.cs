@@ -52,7 +52,10 @@ namespace SFA.DAS.ProviderRegistrations.Web.UnitTests.Controllers.RegistrationCo
                 };
 
                 _mapper = new Mock<IMapper>();
+                
                 _authenticationService = new Mock<IAuthenticationService>();
+                _authenticationService.Setup(x => x.Ukprn).Returns(12345);
+
                 _mediator = new Mock<IMediator>();
                 _mediator.Setup(x => x.Send(It.IsAny<AddInvitationCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(Guid.NewGuid().ToString());
                 _mediator.Setup(x => x.Send(It.IsAny<GetUnsubscribedQuery>(), It.IsAny<CancellationToken>())).ReturnsAsync(false);
