@@ -17,8 +17,18 @@ namespace SFA.DAS.ProviderRelationships.Api.Controllers
             _mediator = mediator;
         }
 
-        [Route]
-        public async Task<IHttpActionResult> Get([FromUri] SendReportTrainingProviderEmailRouteValues routeValues, CancellationToken cancellationToken)
+        [Route("reportProvider")]
+        public async Task<IHttpActionResult> ReportProvider([FromUri] SendReportTrainingProviderEmailRouteValues routeValues, CancellationToken cancellationToken)
+        {
+            await _mediator.Send(new SendReportTrainingProviderNotificationCommand(
+                routeValues.EmployerEmailAddress, routeValues.EmailReported, routeValues.TrainingProvider,
+                routeValues.TrainingProviderSenderName, routeValues.EmailSent), cancellationToken);
+
+            return Ok();
+        }
+
+        [Route("inviteEmployer")]
+        public async Task<IHttpActionResult> InviteEmployer([FromUri] SendReportTrainingProviderEmailRouteValues routeValues, CancellationToken cancellationToken)
         {
             await _mediator.Send(new SendReportTrainingProviderNotificationCommand(
                 routeValues.EmployerEmailAddress, routeValues.EmailReported, routeValues.TrainingProvider,
