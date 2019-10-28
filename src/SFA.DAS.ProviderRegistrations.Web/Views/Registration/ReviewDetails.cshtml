@@ -1,4 +1,5 @@
-﻿@model SFA.DAS.ProviderRegistrations.Web.ViewModels.NewEmployerUserViewModel
+﻿@using SFA.DAS.ProviderRegistrations.Web.Extensions
+@model SFA.DAS.ProviderRegistrations.Web.ViewModels.NewEmployerUserViewModel
 @{
     ViewData["Title"] = "Manage apprenticeships";
 }
@@ -8,7 +9,7 @@
     <link rel="Stylesheet" href="@Href("~/stylesheets/site.css")" />
 }
 
-<form id="InviteEmployerUser" novalidate method="post" action="@Url.Action("InviteEmployeruser")">
+<form id="InviteEmployerUser" novalidate method="post" action="@Url.ProviderAction("InviteEmployeruser")">
     @Html.AntiForgeryToken()
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">

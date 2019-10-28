@@ -1,4 +1,5 @@
-﻿@{
+﻿@using SFA.DAS.ProviderRegistrations.Web.Extensions
+@{
     ViewData["Title"] = "Manage apprenticeships";
 }
 
@@ -23,6 +24,6 @@
         </div>
 
         <br>
-        <a href="@Url.Action("NewEmployerUser")" class="govuk-button govuk-button--start">Start</a>
+        <a href="@Url.ProviderAction("NewEmployerUser")" class="govuk-button govuk-button--start">Start</a>
     </div>
 </div>

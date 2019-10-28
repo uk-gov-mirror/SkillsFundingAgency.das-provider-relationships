@@ -15,7 +15,7 @@
         </h1>
         <p>Enter the details for the employer. Once the account is created, the employer will be able to add other users.</p>
         <br>
-        <form id="NewEmployerUser" novalidate method="post" action="@Url.Action("NewEmployerUser")">
+        <form id="NewEmployerUser" novalidate method="post" action="@Url.ProviderAction("NewEmployerUser")">
             @Html.AntiForgeryToken()
             <div class="govuk-form-group">
                 <div class="govuk-form-group @Html.AddClassIfPropertyInError(x => x.EmployerOrganisation, "govuk-form-group--error")">

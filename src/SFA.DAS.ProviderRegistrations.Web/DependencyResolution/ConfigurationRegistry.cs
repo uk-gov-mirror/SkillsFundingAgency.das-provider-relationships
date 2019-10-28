@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using SFA.DAS.Authorization.ProviderFeatures.Configuration;
-using SFA.DAS.Encoding;
 using SFA.DAS.ProviderRegistrations.Configuration;
 using StructureMap;
 
@@ -10,12 +8,7 @@ namespace SFA.DAS.ProviderRegistrations.Web.DependencyResolution
     {
         public ConfigurationRegistry()
         {
-            //AddConfiguration<ApprenticeshipInfoServiceConfiguration>(ProviderRegistrationsConfigurationKeys.ApprenticeshipInfoServiceConfiguration);
             AddConfiguration<AuthenticationSettings>(ProviderRegistrationsConfigurationKeys.AuthenticationSettings);
-            //AddConfiguration<CommitmentsClientApiConfiguration>(ProviderCommitmentsConfigurationKeys.CommitmentsClientApiConfiguration);
-            //AddConfiguration<CommitmentPermissionsApiClientConfiguration>(ProviderCommitmentsConfigurationKeys.CommitmentsClientApiConfiguration);
-            AddConfiguration<EncodingConfig>(ProviderRegistrationsConfigurationKeys.Encoding);
-            AddConfiguration<ProviderFeaturesConfiguration>(ProviderRegistrationsConfigurationKeys.FeaturesConfiguration);
             AddConfiguration<ProviderRegistrationsSettings>(ProviderRegistrationsConfigurationKeys.ProviderRegistrations);
         }
 

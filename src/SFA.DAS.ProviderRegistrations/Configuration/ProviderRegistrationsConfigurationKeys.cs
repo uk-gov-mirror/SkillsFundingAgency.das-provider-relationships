@@ -7,11 +7,5 @@
         public const string ProviderRegistrations = "SFA.DAS.ProviderRegistrations";
 
         public static string AuthenticationSettings = $"{ProviderRegistrations}:AuthenticationSettings";
-
-        //public static string ApprenticeshipInfoServiceConfiguration = $"{ProviderRegistrations}:ApprenticeshipInfoServiceConfiguration";
-
-        //public static string CommitmentsClientApiConfiguration = $"{ProviderRegistrations}:CommitmentsClientApi";
-
-        public static string FeaturesConfiguration = $"{ProviderRegistrations}:Features";
     }
 }

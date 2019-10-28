@@ -11,12 +11,8 @@ namespace SFA.DAS.ProviderRegistrations.Web.DependencyResolution
         {
             registry.IncludeRegistry<AuthorizationRegistry>();
             registry.IncludeRegistry<AutoConfigurationRegistry>();
-            //registry.IncludeRegistry<CommitmentsApiClientRegistry>();
-            //registry.IncludeRegistry<CommitmentPermissionsAuthorizationRegistry>();
             registry.IncludeRegistry<ConfigurationRegistry>();
-            //registry.IncludeRegistry<CommitmentsSharedRegistry>();
-            registry.IncludeRegistry<MediatorRegistry>();
-            registry.IncludeRegistry<EncodingRegistry>();
+            registry.IncludeRegistry<MediatorRegistry>(); 
             registry.IncludeRegistry<DataRegistry>();
             registry.IncludeRegistry<MapperRegistry>();
             //registry.IncludeRegistry<ProviderFeaturesAuthorizationRegistry>();
