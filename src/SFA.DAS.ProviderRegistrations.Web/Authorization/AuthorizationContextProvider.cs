@@ -17,31 +17,7 @@ namespace SFA.DAS.ProviderRegistrations.Web.Authorization
         public IAuthorizationContext GetAuthorizationContext()
         {
             var authorizationContext = new AuthorizationContext();
-            var services = GetServices();
-            var ukprn = GetUkrpn();
-            var userEmail = GetUserEmail();
-
-            if (services != null)
-            {
-                authorizationContext.Set(AuthorizationContextKeys.Services, services);
-            }
-
             return authorizationContext;
-        }
-
-        private IEnumerable<string> GetServices()
-        {
-            if (!_authenticationService.IsUserAuthenticated())
-            {
-                return null;
-            }
-
-            if (!_authenticationService.TryGetUserClaimValues(ProviderClaims.Service, out var services))
-            {
-                throw new UnauthorizedAccessException($"Failed to get value for claim '{ProviderClaims.Service}'");
-            }
-
-            return services;
         }
 
         private long? GetUkrpn()

@@ -23,7 +23,6 @@ namespace SFA.DAS.ProviderRegistrations.Web.DependencyResolution
                     scan.RegisterConcreteTypesAgainstTheFirstInterface();
                 });
 
-            For<IAuthorizationHandler>().Add<ServiceAuthorizationHandler>();
             For<IAuthenticationService>().Use<AuthenticationService>().Singleton();
             For<IAuthorizationContextProvider>().Use<AuthorizationContextProvider>();
             For<ILinkGenerator>().Use<LinkGenerator>().Singleton();

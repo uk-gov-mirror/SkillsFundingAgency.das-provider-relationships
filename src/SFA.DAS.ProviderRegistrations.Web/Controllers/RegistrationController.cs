@@ -9,6 +9,7 @@ using SFA.DAS.ProviderRegistrations.Application.Queries.GetInvitationQuery;
 using SFA.DAS.ProviderRegistrations.Application.Queries.GetUnsubscribedQuery;
 using SFA.DAS.ProviderRegistrations.Types;
 using SFA.DAS.ProviderRegistrations.Web.Authentication;
+using SFA.DAS.ProviderRegistrations.Web.Extensions;
 using SFA.DAS.ProviderRegistrations.Web.ViewModels;
 using SFA.DAS.ProviderUrlHelper.Core;
 
@@ -29,7 +30,6 @@ namespace SFA.DAS.ProviderRegistrations.Web.Controllers
         }
 
         [HttpGet]
-        [HttpGet("/{providerId}/[controller]")]
         public IActionResult StartAccountSetup()
         {
             return View();
@@ -90,7 +90,7 @@ namespace SFA.DAS.ProviderRegistrations.Web.Controllers
         {
             switch (action)
             {
-                case "Invite": return RedirectToAction("StartAccountSetup");
+                case "Invite": return Redirect(@Url.ProviderAction("StartAccountSetup"));
                 case "Homepage": return Redirect(@Url.ProviderApprenticeshipServiceLink(""));
                 default:
                 {

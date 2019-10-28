@@ -2,10 +2,7 @@
 {
     public static class ProviderRegistrationsConfigurationKeys
     {
-        public const string Encoding = "SFA.DAS.Encoding";
-
-        public const string ProviderRegistrations = "SFA.DAS.ProviderRegistrations";
-
+        public const string ProviderRegistrations = "SFA.DAS.ProviderRelationships";
         public static string AuthenticationSettings = $"{ProviderRegistrations}:AuthenticationSettings";
     }
 }
