@@ -24,7 +24,7 @@ namespace SFA.DAS.ProviderRelationships.Services
 
             try
             {
-                var invitation = await _httpClient.Get<InvitationDto>(invitationQueryUri, cancellationToken);
+                var invitation = await _httpClient.Get<InvitationDto>(invitationQueryUri, null, cancellationToken);
                 return invitation;
             }
             catch (Exception ex)

@@ -23,7 +23,7 @@ namespace SFA.DAS.ProviderRelationships.Services
 
             try
             {
-                var blockedOrgStatus = await _httpClient.Get<BlockedOrganisationStatus>(blockedProviderStatusUri, cancellationToken);
+                var blockedOrgStatus = await _httpClient.Get<BlockedOrganisationStatus>(blockedProviderStatusUri, null, cancellationToken);
                 return blockedOrgStatus;
             }
             catch (Exception ex)
@@ -56,7 +56,7 @@ namespace SFA.DAS.ProviderRelationships.Services
 
             try
             {
-                var vacanciesSummary = await _httpClient.Get<VacanciesSummary>(vacanciesSummaryUri, cancellationToken);
+                var vacanciesSummary = await _httpClient.Get<VacanciesSummary>(vacanciesSummaryUri, null, cancellationToken);
                 return vacanciesSummary;
             }
             catch (Exception ex)
